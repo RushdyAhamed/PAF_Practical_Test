@@ -120,18 +120,18 @@ function validateItemForm() {
 		return "Insert Email.";
 	}
 	// is numerical value
-	//var tmpPrice = $("#itemPrice").val().trim();
-	//if (!$.isNumeric(tmpPrice)) {
-	//	return "Insert a numerical value for Item Price.";
-	if ($("#phonenumber").val().trim() == "") {
+	var tmpPrice = $("#itemPrice").val().trim();
+	if (!$.isNumeric(tmpPrice)) {
+		return "Insert a numerical value for Item Price.";
+	//if ($("#phonenumber").val().trim() == "") {
 		return "Insert Patient Phone Number.";
 	}
 	// convert to decimal price
-	//$("#itemPrice").val(parseFloat(tmpPrice).toFixed(2));
+	$("#itemPrice").val(parseFloat(tmpPrice).toFixed(2));
 	// DESCRIPTION------------------------
-	//if ($("#itemDesc").val().trim() == "") {
-	//	return "Insert Item Description.";
-	if ($("#address").val().trim() == "") {
+	if ($("#itemDesc").val().trim() == "") {
+		return "Insert Item Description.";
+	//if ($("#address").val().trim() == "") {
 		return "Insert Patient Address.";
 	}
 	return true;
