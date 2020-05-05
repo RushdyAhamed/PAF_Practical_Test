@@ -22,18 +22,18 @@ $(document).on("click", "#btnSave", function(event) {
 	}
 
 	// If valid------------------------
-	var type = ($("#hidpatientidSave").val() == "") ? "POST" : "PUT";
+	var type = ($("#hidSave").val() == "") ? "POST" : "PUT";
 	$.ajax({
 		url : "PatientsAPI",
 		type : type,
 		data : $("#formPatient").serialize(),
 		dataType : "text",
 		complete : function(response, status) {
-			onItemSaveComplete(response.responseText, status);
+			onPatientSaveComplete(response.responseText, status);
 		}
 	});
 });
-function onItemSaveComplete(response, status) {
+function onPatientSaveComplete(response, status) {
 	if (status == "success") {
 		var resultSet = JSON.parse(response);
 		if (resultSet.status.trim() == "success") {
@@ -105,7 +105,7 @@ function onPatientDeleteComplete(response, status) {
 }
 
 // CLIENTMODEL=========================================================================
-function validateItemForm() {
+function validatePatientForm() {
 	// CODE
 	if ($("#name").val().trim() == "") {
 		return "Insert Patient Name.";
@@ -117,18 +117,22 @@ function validateItemForm() {
 
 	// PRICE-------------------------------
 	if ($("#email").val().trim() == "") {
-		return "Insert email.";
+		return "Insert Email.";
 	}
 	// is numerical value
-	var tmpPrice = $("#email").val().trim();
+/*	var tmpPrice = $("#email").val().trim();
 	if (!$.isNumeric(tmpPrice)) {
 		return "Insert a numerical value for Item Price.";
 	}
+*/
 	// convert to decimal price
 	//$("#itemPrice").val(parseFloat(tmpPrice).toFixed(2));
 	// DESCRIPTION------------------------
 	if ($("#phonenumber").val().trim() == "") {
-		return "Insert Phonenumber.";
+		return "Insert Phone Number.";
 	}
+	if ($("#address").val().trim() == "") {
+		return "Insert Patient Address.";
+}
 	return true;
 }
