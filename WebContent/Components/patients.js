@@ -12,7 +12,7 @@ $(document).on("click", "#btnSave", function(event) {
 	$("#alertSuccess").hide();
 	$("#alertError").text("");
 	$("#alertError").hide();
-	
+
 	// Form validation-------------------
 	var status = validatePatientForm();
 	if (status != true) {
@@ -67,7 +67,8 @@ $(document).on(
 			$("#name").val($(this).closest("tr").find('td:eq(0)').text());
 			$("#password").val($(this).closest("tr").find('td:eq(1)').text());
 			$("#email").val($(this).closest("tr").find('td:eq(2)').text());
-			$("#phonenumber").val($(this).closest("tr").find('td:eq(3)').text());
+			$("#phonenumber")
+					.val($(this).closest("tr").find('td:eq(3)').text());
 			$("#address").val($(this).closest("tr").find('td:eq(4)').text());
 		});
 
@@ -106,33 +107,38 @@ function onPatientDeleteComplete(response, status) {
 
 // CLIENTMODEL=========================================================================
 function validatePatientForm() {
-	// CODE
+	// NAME
 	if ($("#name").val().trim() == "") {
 		return "Insert Patient Name.";
 	}
-	// NAME
+	// PASSWORD
 	if ($("#password").val().trim() == "") {
 		return "Insert Password.";
 	}
 
 	// PRICE-------------------------------
 	if ($("#email").val().trim() == "") {
-		return "Insert Email.";
+		return "Insert email.";
 	}
 	// is numerical value
-/*	var tmpPrice = $("#email").val().trim();
+	var tmpPrice = $("#email").val().trim();
 	if (!$.isNumeric(tmpPrice)) {
-		return "Insert a numerical value for Item Price.";
+		return "Insert a numerical value for email.";
 	}
-*/
 	// convert to decimal price
-	//$("#itemPrice").val(parseFloat(tmpPrice).toFixed(2));
+	//$("#email").val(parseFloat(tmpPrice).toFixed(2));
 	// DESCRIPTION------------------------
 	if ($("#phonenumber").val().trim() == "") {
-		return "Insert Phone Number.";
+		return "Insert pno.";
 	}
+/*	var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+	if (){
+		return  "Please Enter Phone number as 10 digit numbers";
+	}
+*/
+	// ADDRESS
 	if ($("#address").val().trim() == "") {
 		return "Insert Patient Address.";
-}
+	}
 	return true;
 }

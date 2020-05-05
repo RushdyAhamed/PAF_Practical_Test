@@ -24,7 +24,7 @@
 				<form id="formPatient" name="formPatient" method="post" action="patients.jsp">
 					Name: <input id="name" name="name" type="text"
 						class="form-control form-control-sm"> <br> Password:
-					<input id="password" name="password" type="text"
+					<input id="password" name="password" type="password"
 						class="form-control form-control-sm"> <br> 
 					Email: <input id="email" name="email" type="text"
 						class="form-control form-control-sm"> <br> 
