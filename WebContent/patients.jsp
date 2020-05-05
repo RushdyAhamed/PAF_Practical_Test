@@ -34,7 +34,7 @@
 						class="form-control form-control-sm"> <br> <input
 						id="btnSave" name="btnSave" type="button" value="Save"
 						class="btn btn-primary"> <input type="hidden"
-						id="hidItemIDSave" name="hidItemIDSave" value="">
+						id="hidpatientidSave" name="hidpatientidSave" value="">
 				</form>
 
 				<div id="alertSuccess" class="alert alert-success"></div>
