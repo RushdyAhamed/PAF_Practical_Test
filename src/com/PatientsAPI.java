@@ -44,7 +44,6 @@ public class PatientsAPI extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		String output = pObj.addPatient(request.getParameter("name"), request.getParameter("password"),
 				request.getParameter("email"), request.getParameter("phonenumber"), request.getParameter("address"));
 		response.getWriter().write(output);

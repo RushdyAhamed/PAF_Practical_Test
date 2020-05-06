@@ -22,7 +22,7 @@ $(document).on("click", "#btnSave", function(event) {
 	}
 
 	// If valid------------------------
-	var type = ($("#hidSave").val() == "") ? "POST" : "PUT";
+	var type = ($("#hidpatientidSave").val() == "") ? "POST" : "PUT";
 	$.ajax({
 		url : "PatientsAPI",
 		type : type,
@@ -109,37 +109,38 @@ function onPatientDeleteComplete(response, status) {
 function validatePatientForm() {
 	// NAME
 	if ($("#name").val().trim() == "") {
-		return "Insert Patient Name.";
+		return "Please Enter Patient Name.";
 	}
+
 	// PASSWORD
 	if ($("#password").val().trim() == "") {
-		return "Insert Password.";
+		return "Enter Password.";
 	}
 
 	// EMAIL-------------------------------
 	if ($("#email").val().trim() == "") {
-		return "Insert email.";
+		return "Enter email.";
 	}
-	// convert to decimal price
-	//$("#email").val(parseFloat(tmpPrice).toFixed(2));
-	
+
 	// PNO------------------------
 	if ($("#phonenumber").val().trim() == "") {
-		return "Insert pno.";
+		return "Enter Phone Number.";
 	}
 	// is numerical value
-	var tmpPno = $("#phonenumber").val().trim();
-	if (!$.isNumeric(tmpPno)) {
-		return "Insert a numerical value for Phone Number.";
+	var tmpno = $("#phonenumber").val().trim();
+	if (!$.isNumeric(tmpno)) {
+		return "Please Enter a numerical value for Phone Number.";
 	}
-/*	var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-	if (){
-		return  "Please Enter Phone number as 10 digit numbers";
-	}
-*/
+	/* var phoneno = $
+	 if($("#phonenumber") == "/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/" )
+	 {
+		 return "Please Enter Phone number as 10 digit numbers";
+	 }
+	 */
+
 	// ADDRESS
 	if ($("#address").val().trim() == "") {
-		return "Insert Patient Address.";
+		return "Enter Patient Address.";
 	}
 	return true;
 }

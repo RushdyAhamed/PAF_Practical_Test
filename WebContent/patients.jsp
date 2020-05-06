@@ -21,16 +21,17 @@
 
 				<h1>Patients Management</h1>
 
-				<form id="formPatient" name="formPatient" method="post" action="patients.jsp">
+				<form id="formPatient" name="formPatient" method="post"
+					action="patients.jsp">
 					Name: <input id="name" name="name" type="text"
 						class="form-control form-control-sm"> <br> Password:
 					<input id="password" name="password" type="password"
-						class="form-control form-control-sm"> <br> 
-					Email: <input id="email" name="email" type="text"
-						class="form-control form-control-sm"> <br> 
-					Phone Number: <input id="phonenumber" name="phonenumber" type="text"
-						class="form-control form-control-sm"> <br> 
-					Address: <input id="address" name="address" type="text"
+						class="form-control form-control-sm"> <br> Email: <input
+						id="email" name="email" type="text"
+						class="form-control form-control-sm"> <br> Phone
+					Number: <input id="phonenumber" name="phonenumber" type="text"
+						class="form-control form-control-sm"> <br> Address: <input
+						id="address" name="address" type="text"
 						class="form-control form-control-sm"> <br> <input
 						id="btnSave" name="btnSave" type="button" value="Save"
 						class="btn btn-primary"> <input type="hidden"

@@ -112,7 +112,7 @@ public class Patient {
 
 			// Complete the html table
 			output += "</table>";
-			System.out.println("Data Read Successfully");
+			// System.out.println("Data Read Successfully");
 		} catch (Exception e) {
 			output = "Error while reading the data!";
 			System.err.println(e.getMessage());
