@@ -116,20 +116,21 @@ function validatePatientForm() {
 		return "Insert Password.";
 	}
 
-	// PRICE-------------------------------
+	// EMAIL-------------------------------
 	if ($("#email").val().trim() == "") {
 		return "Insert email.";
 	}
-	// is numerical value
-	var tmpPrice = $("#email").val().trim();
-	if (!$.isNumeric(tmpPrice)) {
-		return "Insert a numerical value for email.";
-	}
 	// convert to decimal price
 	//$("#email").val(parseFloat(tmpPrice).toFixed(2));
-	// DESCRIPTION------------------------
+	
+	// PNO------------------------
 	if ($("#phonenumber").val().trim() == "") {
 		return "Insert pno.";
+	}
+	// is numerical value
+	var tmpPno = $("#phonenumber").val().trim();
+	if (!$.isNumeric(tmpPno)) {
+		return "Insert a numerical value for Phone Number.";
 	}
 /*	var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 	if (){
