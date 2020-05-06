@@ -131,11 +131,10 @@ function validatePatientForm() {
 	if (!$.isNumeric(tmpno)) {
 		return "Please Enter a numerical value for Phone Number.";
 	}
-	/* var phoneno = $
-	 if($("#phonenumber") == "/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/" )
-	 {
-		 return "Please Enter Phone number as 10 digit numbers";
-	 }
+	/*
+	 * var phoneno = $ if($("#phonenumber") == "/^\(?([0-9]{3})\)?[-.
+	 * ]?([0-9]{3})[-. ]?([0-9]{4})$/" ) { return "Please Enter Phone number as
+	 * 10 digit numbers"; }
 	 */
 
 	// ADDRESS
